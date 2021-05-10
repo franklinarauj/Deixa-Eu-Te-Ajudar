@@ -1,10 +1,6 @@
 <template>
-  <div class="home">
+  <div class="splash">
     <img alt="Vue logo" src="../assets/logo.png" />
-
-    <p>
-      {{ texto }}
-    </p>
   </div>
 </template>
 
@@ -12,14 +8,11 @@
   export default {
     name: "Splash",
 
-    data() {
-      return {
-        texto: "aoegmaoegm",
-      };
+    mounted() {
+      document.body.classList.add("splash");
     },
-
-    methods: {
-      butao() {},
+    destroyed() {
+      document.body.classList.remove("splash");
     },
   };
 </script>
