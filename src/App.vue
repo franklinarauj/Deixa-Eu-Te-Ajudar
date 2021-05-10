@@ -23,7 +23,7 @@
   }
 
   .splash {
-    background: var(--primary);
+    background: #77EBD4;
   }
 
   body {
