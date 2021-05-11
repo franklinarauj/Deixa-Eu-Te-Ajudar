@@ -21,7 +21,7 @@
   }
 
   .container h1 {
-    font-size: 32px;
+    font-size: 48px;
     line-height: 34.88px;
     text-decoration: underline;
     color: #2c2c2c;

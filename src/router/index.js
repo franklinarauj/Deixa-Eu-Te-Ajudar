@@ -5,6 +5,7 @@ import Home from "../pages/Home.vue";
 import MenuHome from "../pages/MenuHome.vue";
 import Subject from "../pages/Subject.vue";
 import Themes from "../pages/Themes.vue";
+import Content from "../pages/Content.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
         path: "/themes",
         name: "Themes",
         component: Themes
+      },
+      {
+        path: "/content",
+        name: "Content",
+        component: Content
       }
     ]
   }
