@@ -1,6 +1,7 @@
 <template>
   <div class="nav">
     <img id="logo" src="../assets/logo.svg" @click="$router.push('/home')" />
+    <img id="menu" src="../assets/menu.svg" />
   </div>
 </template>
 
@@ -12,6 +13,7 @@
   .nav {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     height: 80px;
     background: linear-gradient(180deg, #77ebd4 84.9%, #fcfcfc 100%), #83ffe6;
@@ -21,5 +23,11 @@
 
   #logo {
     cursor: pointer;
+    margin-left: 4px;
+  }
+
+  #menu {
+    margin-right: 25px;
+    height: 28px;
   }
 </style>
