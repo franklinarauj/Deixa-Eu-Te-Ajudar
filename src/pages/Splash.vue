@@ -1,18 +1,22 @@
 <template>
   <div class="splash">
     <img class="logo" alt="Vue logo" src="../assets/logo-inicial.png" />
-    <img class="botao" src="../assets/botao_vamos_la.png" alt="">
-
+    <img
+      class="botao"
+      @click="$router.push('/home')"
+      src="../assets/botao_vamos_la.png"
+      alt=""
+    />
   </div>
 </template>
 
 <style>
-body{
-  min-height: 0cm;
-}
+  body {
+    min-height: 0cm;
+  }
 
-@media(max-width: 600px){
-    .logo{
+  @media (max-width: 600px) {
+    .logo {
       margin-top: 30%;
       display: block;
       margin-left: auto;
@@ -20,8 +24,8 @@ body{
       margin-bottom: 35%;
     }
   }
-@media(min-width: 601px){
-    .logo{
+  @media (min-width: 601px) {
+    .logo {
       display: block;
       margin-top: 10%;
       margin-left: auto;
@@ -29,11 +33,12 @@ body{
       margin-bottom: 3%;
     }
   }
-  
-  .botao{
+
+  .botao {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
   }
 </style>
 

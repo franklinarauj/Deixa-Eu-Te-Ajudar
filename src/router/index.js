@@ -2,7 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Splash from "../pages/Splash.vue";
 import Home from "../pages/Home.vue";
-import Menu from "../pages/Menu.vue";
+import MenuHome from "../pages/MenuHome.vue";
+import Subject from "../pages/Subject.vue";
+import Themes from "../pages/Themes.vue";
 
 Vue.use(VueRouter);
 
@@ -19,8 +21,18 @@ const routes = [
     children: [
       {
         path: "",
-        name: "Menu",
-        component: Menu
+        name: "MenuHome",
+        component: MenuHome
+      },
+      {
+        path: "/subject",
+        name: "Subject",
+        component: Subject
+      },
+      {
+        path: "/themes",
+        name: "Themes",
+        component: Themes
       }
     ]
   }

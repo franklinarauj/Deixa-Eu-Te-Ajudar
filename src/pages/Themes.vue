@@ -1,5 +1,7 @@
 <template>
-  <div>XABLAU</div>
+  <div class="container">
+    <h1>Temas</h1>
+  </div>
 </template>
 
 <script>

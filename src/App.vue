@@ -11,12 +11,12 @@
   }
 
   @font-face {
-    font-family: Leo;
-    src: url("./assets/Leo hates school.ttf");
+    font-family: Amatic;
+    src: url("./assets/AmaticSC-Regular.ttf");
   }
 
   #app {
-    font-family: "Leo";
+    font-family: "Amatic";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: #2c3e50;
