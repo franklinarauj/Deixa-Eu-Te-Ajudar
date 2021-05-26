@@ -1,7 +1,7 @@
 <template>
   <div class="nav">
     <img id="logo" src="../assets/logo.svg" @click="$router.push('/home')" />
-    <img id="menu" src="../assets/menu.svg" />
+    <img id="menu" src="../assets/menu.svg" @click="$router.push('/menu')" />
   </div>
 </template>
 
