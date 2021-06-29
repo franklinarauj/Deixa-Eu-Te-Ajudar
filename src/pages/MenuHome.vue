@@ -3,9 +3,9 @@
     <h1>Escolha o seu ano</h1>
 
     <ul id="menu-home">
-      <li @click="$router.push('/subject')">1º Ano</li>
-      <li @click="$router.push('/subject')">2º Ano</li>
-      <li @click="$router.push('/subject')">3º Ano</li>
+      <li @click="$router.push('/1')">1º Ano</li>
+      <li>2º Ano</li>
+      <li>3º Ano</li>
     </ul>
   </div>
 </template>

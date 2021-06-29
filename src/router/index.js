@@ -7,11 +7,11 @@ import Subject from "../pages/Subject.vue";
 import Themes from "../pages/Themes.vue";
 import Content from "../pages/Content.vue";
 import Menu from "../pages/Menu.vue";
-import MenuOpcoes from "../pages/MenuOpcoes.vue"
-import Contato from "../pages/Contato.vue"
-import NossoObjetivo from "../pages/NossoObjetivo.vue"
-import QuemSomos from "../pages/QuemSomos.vue"
-import Referencias from "../pages/Referencias.vue"
+import MenuOpcoes from "../pages/MenuOpcoes.vue";
+import Contato from "../pages/Contato.vue";
+import NossoObjetivo from "../pages/NossoObjetivo.vue";
+import QuemSomos from "../pages/QuemSomos.vue";
+import Referencias from "../pages/Referencias.vue";
 
 Vue.use(VueRouter);
 
@@ -19,7 +19,7 @@ const routes = [
   {
     path: "/",
     name: "Splash",
-    component: Splash,
+    component: Splash
   },
   {
     path: "/menu",
@@ -50,7 +50,8 @@ const routes = [
         path: "referencias",
         name: "Referencias",
         component: Referencias
-      }]
+      }
+    ]
   },
   {
     path: "/home",
@@ -63,19 +64,19 @@ const routes = [
         component: MenuHome
       },
       {
-        path: "/subject",
-        name: "Subject",
-        component: Subject
+        path: "/:year/:subject/:theme",
+        name: "Content",
+        component: Content
       },
       {
-        path: "/themes",
+        path: "/:year/:subject",
         name: "Themes",
         component: Themes
       },
       {
-        path: "/content",
-        name: "Content",
-        component: Content
+        path: "/:year",
+        name: "Subject",
+        component: Subject
       }
     ]
   }

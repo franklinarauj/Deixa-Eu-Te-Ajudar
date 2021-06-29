@@ -1,23 +1,37 @@
 <template>
   <div class="container">
     <h1>Temas</h1>
-    <span @click="$router.push('/content')">OVD - Origem da Vida</span>
-    <span @click="$router.push('/content')">BIOC - Biomoléculas</span>
-    <span @click="$router.push('/content')">CIT - Citologia</span>
-    <span @click="$router.push('/content')">EMBE - Embriologia</span>
-    <span @click="$router.push('/content')">HIH - Histologia Humana</span>
-    <span @click="$router.push('/content')">FHA - Fisiologia Humana e Animal</span>
+    <div
+      class="theme"
+      v-for="(theme, index) in themes"
+      :key="index"
+      @click="
+        $router.push(
+          `/${$route.params.year}/${$route.params.subject}/${index}`
+        )
+      "
+    >
+      {{ theme.name }}
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+  export default {
+    inject: ["conteudo"],
 
-}
+    data() {
+      return {
+        themes: this.conteudo[this.$route.params.year].filter(
+          (subject) => subject.name === this.$route.params.subject
+        )[0].themes,
+      };
+    },
+  };
 </script>
 
-<style>
-  span {
+<style scoped>
+  .theme {
     display: block;
     font-size: 36px;
     margin-bottom: 30px;

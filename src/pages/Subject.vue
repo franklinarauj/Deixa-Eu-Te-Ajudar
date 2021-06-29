@@ -3,7 +3,12 @@
     <h1>Escolha a matéria</h1>
 
     <div id="subject-list">
-      <div class="item" v-for="(subject, index) in subjects" :key="index" @click="$router.push('/themes')">
+      <div
+        class="item"
+        v-for="(subject, index) in subjects"
+        :key="index"
+        @click="$router.push(`/${$route.params.year}/${subject.name}`)"
+      >
         <div>
           <img src="../assets/biologia.svg" />
         </div>
@@ -16,47 +21,11 @@
 
 <script>
   const images = require.context("../assets/", false, /\.svg$/);
+
   export default {
     data() {
       return {
-        subjects: [
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-          {
-            name: "Biologia",
-            icon: "biologia",
-          },
-        ],
+        subjects: this.conteudo[this.$route.params.year],
       };
     },
     methods: {
@@ -64,6 +33,7 @@
         return images("./" + str + ".svg");
       },
     },
+    inject: ["conteudo"],
   };
 </script>
 

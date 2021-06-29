@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .texto {
     margin-top: 50px;
   }
